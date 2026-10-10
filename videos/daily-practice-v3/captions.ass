@@ -1,0 +1,49 @@
+[Script Info]
+Title: Daily Practice Editorial V3
+ScriptType: v4.00+
+PlayResX: 1080
+PlayResY: 1920
+WrapStyle: 2
+ScaledBorderAndShadow: yes
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Caption,OpenAI Sans,64,&H00E8F0F4,&H00E8F0F4,&H771C1716,&HAA1C1716,0,0,0,0,100,100,-1,0,1,2,1,5,90,130,0,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.00,0:00:00.83,Caption,,0,0,0,,{\an5\fs64\move(480,1114,480,1100,0,140)\fad(120,40)}these {\fnInstrument Serif\fs140\t(150,240,\1c&H8AEBDD&)}30{\fnOpenAI Sans\fs64\1c&HE8F0F4&} minutes
+Dialogue: 0,0:00:00.83,0:00:01.69,Caption,,0,0,0,,{\an5\fs64\move(480,1404,480,1390,0,140)\fad(120,40)}that you put in
+Dialogue: 0,0:00:01.69,0:00:02.73,Caption,,0,0,0,,{\an5\fs64\move(480,1404,480,1390,0,140)\fad(120,40)}every single day
+Dialogue: 0,0:00:02.93,0:00:03.67,Caption,,0,0,0,,{\an5\fs64\move(480,1404,480,1390,0,140)\fad(120,40)}prime your brain
+Dialogue: 0,0:00:03.67,0:00:04.75,Caption,,0,0,0,,{\an5\fs64\move(480,1404,480,1390,0,140)\fad(120,40)}to new habit formation
+Dialogue: 0,0:00:04.75,0:00:05.67,Caption,,0,0,0,,{\an5\fs64\move(480,1404,480,1390,0,140)\fad(120,40)}and skill sets
+Dialogue: 0,0:00:05.84,0:00:06.24,Caption,,0,0,0,,{\an5\fs64\move(480,1404,480,1390,0,140)\fad(70,40)}and the more
+Dialogue: 0,0:00:06.24,0:00:07.08,Caption,,0,0,0,,{\an5\fs64\move(480,1404,480,1390,0,140)\fad(120,40)}that you do something
+Dialogue: 0,0:00:07.39,0:00:08.11,Caption,,0,0,0,,{\an5\fs64\move(480,1404,480,1390,0,140)\fad(120,40)}the more it gets
+Dialogue: 0,0:00:08.11,0:00:09.25,Caption,,0,0,0,,{\an5\fs56\move(480,1404,480,1390,0,140)\fad(120,40)}{\t(0,100,\1c&H8AEBDD&)}{\fnInstrument Serif\fs80}hardwired{\fnOpenAI Sans\fs56\1c&HE8F0F4&} into your brain
+Dialogue: 0,0:00:09.57,0:00:10.05,Caption,,0,0,0,,{\an5\fs64\move(480,1404,480,1390,0,140)\fad(70,40)}so if youve ever
+Dialogue: 0,0:00:10.05,0:00:10.79,Caption,,0,0,0,,{\an5\fs64\move(480,1404,480,1390,0,140)\fad(120,40)}heard the phrase
+Dialogue: 0,0:00:10.86,0:00:12.12,Caption,,0,0,0,,{\an5\fs56\move(480,1404,480,1390,0,140)\fad(120,40)}neurons that {\t(520,620,\1c&H8AEBDD&)}fire{\fnOpenAI Sans\fs56\1c&HE8F0F4&} together
+Dialogue: 0,0:00:12.12,0:00:12.72,Caption,,0,0,0,,{\an5\fs64\move(480,1404,480,1390,0,140)\fad(120,40)}{\t(0,100,\1c&H8AEBDD&)}wire{\fnOpenAI Sans\fs64\1c&HE8F0F4&} together
+Dialogue: 0,0:00:12.72,0:00:13.18,Caption,,0,0,0,,{\an5\fs64\move(480,1404,480,1390,0,140)\fad(70,40)}what the {\t(210,310,\1c&H8AEBDD&)}hell{\fnOpenAI Sans\fs64\1c&HE8F0F4&}
+Dialogue: 0,0:00:13.18,0:00:13.74,Caption,,0,0,0,,{\an5\fs64\move(480,1404,480,1390,0,140)\fad(70,40)}does that {\t(270,370,\1c&H8AEBDD&)}mean{\fnOpenAI Sans\fs64\1c&HE8F0F4&}
+Dialogue: 0,0:00:13.78,0:00:15.22,Caption,,0,0,0,,{\an5\fs56\move(480,1404,480,1390,0,140)\fad(120,40)}when they say fire together
+Dialogue: 0,0:00:15.22,0:00:15.78,Caption,,0,0,0,,{\an5\fs64\move(480,1404,480,1390,0,140)\fad(70,40)}your brain sends
+Dialogue: 0,0:00:15.78,0:00:16.74,Caption,,0,0,0,,{\an5\fs64\move(480,1404,480,1390,0,140)\fad(120,40)}an electronic signal
+Dialogue: 0,0:00:16.74,0:00:17.74,Caption,,0,0,0,,{\an5\fs64\move(480,1404,480,1390,0,140)\fad(120,40)}from one neuron
+Dialogue: 0,0:00:17.74,0:00:18.72,Caption,,0,0,0,,{\an5\fs64\move(480,1404,480,1390,0,140)\fad(120,40)}to another one
+Dialogue: 0,0:00:19.06,0:00:20.12,Caption,,0,0,0,,{\an5\fs64\move(480,1404,480,1390,0,140)\fad(120,40)}and what happens is
+Dialogue: 0,0:00:20.12,0:00:20.68,Caption,,0,0,0,,{\an5\fs64\move(480,1404,480,1390,0,140)\fad(70,40)}they start to
+Dialogue: 0,0:00:20.68,0:00:21.48,Caption,,0,0,0,,{\an5\fs64\move(480,1404,480,1390,0,140)\fad(120,40)}wire together
+Dialogue: 0,0:00:21.68,0:00:22.62,Caption,,0,0,0,,{\an5\fs56\move(480,1404,480,1390,0,140)\fad(120,40)}so the more your neurons
+Dialogue: 0,0:00:22.62,0:00:23.30,Caption,,0,0,0,,{\an5\fs64\move(480,1404,480,1390,0,140)\fad(120,40)}in your brain
+Dialogue: 0,0:00:23.30,0:00:24.20,Caption,,0,0,0,,{\an5\fs64\move(480,1404,480,1390,0,140)\fad(120,40)}actually start to
+Dialogue: 0,0:00:24.20,0:00:25.12,Caption,,0,0,0,,{\an5\fs64\move(480,1404,480,1390,0,140)\fad(120,40)}fire together
+Dialogue: 0,0:00:25.32,0:00:25.94,Caption,,0,0,0,,{\an5\fs64\move(480,1404,480,1390,0,140)\fad(120,40)}if you do it
+Dialogue: 0,0:00:25.94,0:00:27.12,Caption,,0,0,0,,{\an5\fs64\move(480,1404,480,1390,0,140)\fad(120,40)}day in day out
+Dialogue: 0,0:00:27.28,0:00:28.62,Caption,,0,0,0,,{\an5\fs56\move(480,1404,480,1390,0,140)\fad(120,40)}it actually gets {\t(620,720,\1c&H8AEBDD&)}{\fnInstrument Serif\fs80}stronger{\fnOpenAI Sans\fs56\1c&HE8F0F4&}
+Dialogue: 0,0:00:28.74,0:00:29.90,Caption,,0,0,0,,{\an5\fs56\move(480,1404,480,1390,0,140)\fad(120,40)}that wiring gets stronger
+Dialogue: 0,0:00:29.90,0:00:30.78,Caption,,0,0,0,,{\an5\fs64\move(480,1404,480,1390,0,140)\fad(120,40)}day in day out
+Dialogue: 0,0:00:30.78,0:00:31.82,Caption,,0,0,0,,{\an5\fs56\move(480,1404,480,1390,0,140)\fad(120,40)}because of you actually
+Dialogue: 0,0:00:31.82,0:00:32.74,Caption,,0,0,0,,{\an5\fs64\move(480,1114,480,1100,0,140)\fad(120,40)}putting the {\fnInstrument Serif\t(360,470,\fs96\1c&H8AEBDD&)}time in

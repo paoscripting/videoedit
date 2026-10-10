@@ -1,0 +1,50 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><title>Daily Practice — Editorial V3</title>
+<script src="assets/gsap.min.js"></script><script src="captions.js"></script>
+<style>
+@font-face{font-family:OpenAI Sans;src:url(assets/OpenAISans-Regular.woff2)}
+@font-face{font-family:OpenAI Sans;src:url(assets/OpenAISans-Semibold.woff2);font-weight:600}
+@font-face{font-family:Instrument Serif;src:url(assets/InstrumentSerif-Regular.ttf)}
+*{box-sizing:border-box}html,body{margin:0;width:1080px;height:1920px;overflow:hidden;background:#16171c;color:#f4f0e8;font-family:OpenAI Sans,sans-serif}
+#root{position:relative;width:1080px;height:1920px;overflow:hidden}
+#picture{position:absolute;inset:0;overflow:hidden;transform-origin:50% 20%;will-change:transform}
+#speaker{width:1080px;height:1920px;object-fit:cover}
+#diagram{position:absolute;left:600px;top:985px;width:330px;height:220px;opacity:0;pointer-events:none}
+#diagram svg{width:100%;height:100%;overflow:visible;filter:drop-shadow(0 2px 7px rgba(0,0,0,.32))}
+#wire{stroke:#ddeB8a;stroke-width:2;fill:none;stroke-dasharray:1;stroke-dashoffset:1}
+.node{fill:#16171c99;stroke:#f4f0e8;stroke-width:4}.core{fill:#ddeB8a;opacity:.45}.pulse{fill:#ddeB8a;opacity:0}
+#underline{position:absolute;left:385px;top:1438px;width:190px;height:4px;background:#ddeB8a;opacity:0;transform-origin:left}
+.caption{position:absolute;left:100px;width:760px;top:1320px;min-height:140px;text-align:center;font-size:64px;line-height:1.15;font-weight:600;letter-spacing:-.03em;text-shadow:0 3px 12px #16171c,0 1px 3px #16171c;opacity:0}
+.caption.hero{top:1000px}.caption .serif{font-family:Instrument Serif,serif;color:#ddeB8a;font-weight:400}
+.caption .number{font-size:140px;vertical-align:middle;color:#f4f0e8}.caption .final{font-size:64px;color:#f4f0e8;display:inline-block;transform-origin:left center}
+</style></head><body><div id="root" data-composition-id="daily-v3" data-start="0" data-duration="32.741" data-width="1080" data-height="1920">
+<div id="picture"><video id="speaker" class="clip" src="cut.mp4" data-start="0" data-duration="32.741" data-track-index="0" data-has-audio="true" playsinline preload="auto"></video></div>
+<audio id="accents" src="assets/accents.wav" data-start="0" data-duration="32.741" data-track-index="2" data-volume="1"></audio>
+<div id="diagram" aria-label="Two neurons develop a stronger connection"><svg viewBox="0 0 330 220"><path id="wire" d="M50 95 C125 52 195 130 275 95" pathLength="1"/><circle class="node" cx="50" cy="95" r="23"/><circle class="node" cx="275" cy="95" r="23"/><circle id="core-a" class="core" cx="50" cy="95" r="10"/><circle id="core-b" class="core" cx="275" cy="95" r="10"/><circle id="pulse" class="pulse" cx="50" cy="95" r="8"/></svg></div>
+<div id="underline"></div>
+<div id="captions"></div>
+</div><script>
+const box=document.getElementById('captions');
+CAPTIONS.forEach((c,i)=>{const el=document.createElement('div');el.id='cap-'+i;el.className='caption'+((i===0||i===34)?' hero':'');let content=c.text;if(i===0)content='these <span class="serif number">30</span> minutes';if(i===34)content='putting the <span class="serif final">time in</span>';el.innerHTML=content;box.appendChild(el)});
+const tl=gsap.timeline({paused:true});
+tl.to('.caption .number',{color:'#ddeb8a',duration:.09},.15);
+tl.to('.caption .final',{color:'#ddeb8a',scale:1.5,duration:.12,ease:'power2.out'},32.18);
+// Restrained speaker punches follow the edit brief, always centered on the head.
+tl.set('#picture',{scale:1.05},0).to('#picture',{scale:1.10,duration:2.73,ease:'power1.out'},0).to('#picture',{scale:1,duration:.18,ease:'power2.inOut'},2.93)
+ .to('#picture',{scale:1.06,duration:.18,ease:'power2.out'},8.11).to('#picture',{scale:1,duration:.18,ease:'power2.inOut'},9.57)
+ .to('#picture',{scale:1.10,duration:.01},12.72).to('#picture',{scale:1,duration:.01},13.78)
+ .to('#picture',{scale:1,duration:.01},21.688).to('#picture',{scale:1.08,duration:.24,ease:'power2.out'},27.90);
+function visible(a,b){tl.to('#diagram',{opacity:1,duration:.2,ease:'power2.out'},a);tl.to('#diagram',{opacity:0,duration:.14,ease:'power2.in'},b)}
+visible(8.11,9.25);visible(10.86,12.72);visible(14.20,30.96);
+tl.fromTo('#wire',{strokeDashoffset:1},{strokeDashoffset:.75,duration:.25,ease:'power2.out',immediateRender:false},8.18);
+tl.set('#wire',{strokeDashoffset:1},10.86).to('#wire',{strokeDashoffset:0,duration:.25,ease:'power2.out'},12.12);
+tl.set('#wire',{strokeDashoffset:0},14.20);
+function glow(t){tl.to(['#core-a','#core-b'],{opacity:1,duration:.12},t).to(['#core-a','#core-b'],{opacity:.45,duration:.3},t+.14)}
+glow(11.38);glow(24.20);
+function signal(t,d){tl.set('#pulse',{x:0,y:0,opacity:1},t);const pts=[[50,95],[108,72],[165,89],[220,111],[275,95]];for(let i=1;i<pts.length;i++)tl.to('#pulse',{x:pts[i][0]-50,y:pts[i][1]-95,duration:d/4,ease:'none'},t+(i-1)*d/4);tl.to('#pulse',{opacity:0,duration:.1},t+d)}
+signal(16.34,1.64);signal(24.20,.55);signal(25.94,.55);signal(26.55,.55);
+tl.to('#wire',{strokeWidth:3.3,duration:.25},20.68).to('#wire',{strokeWidth:6,duration:.35,ease:'power2.out'},27.90);
+tl.fromTo('#underline',{opacity:0,scaleX:0},{opacity:1,scaleX:1,duration:.22,ease:'power2.out',immediateRender:false},2.19).to('#underline',{opacity:0,duration:.12},2.72);
+tl.fromTo('#underline',{opacity:0,scaleX:0},{opacity:1,scaleX:1,duration:.2,ease:'power2.out',immediateRender:false},29.50).to('#underline',{opacity:0,duration:.14},30.78);
+CAPTIONS.forEach((c,i)=>{const sel='#cap-'+i;const fast=c.end-c.start<.6;tl.fromTo(sel,{opacity:0,y:fast?6:14},{opacity:1,y:0,duration:fast?.07:.14,ease:'power2.out',immediateRender:false},c.start);if(i!==34)tl.set(sel,{opacity:0},c.end)});
+window.__timelines=window.__timelines||{};window.__timelines['daily-v3']=tl;
+</script></body></html>
